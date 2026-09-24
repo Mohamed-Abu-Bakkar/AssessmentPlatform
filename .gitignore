@@ -1,0 +1,23 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Build artifacts
+build/
+dist/
+
+# IDE and OS files
+.idea/
+.vscode/
+.DS_Store
