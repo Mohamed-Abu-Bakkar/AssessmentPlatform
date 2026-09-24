@@ -1,0 +1,23 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: assessment-ux-prototype
+    container_name: assessment-ux-prototype
+    ports:
+      - "4173:4173"
+    restart: unless-stopped
+
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    image: assessment-ux-prototype-dev
+    container_name: assessment-ux-prototype-dev
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    restart: unless-stopped
